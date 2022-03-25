@@ -1,0 +1,219 @@
+/* Global variables */
+:root {
+    --main-color: #10cab7;
+}
+
+@font-face {
+    font-family: "Open Sans";
+    /* font-style: normal;*/
+    /* font-weight: 800; */
+    src: url("../fonts/OpenSans-VariableFont_wdth\,wght.ttf"); /* format('woff') */
+}
+@font-face {
+    font-family: "Open Sans Extrabold";
+    /* font-style: normal;*/
+    font-weight: 800;
+    src: url("../fonts/OpenSans-VariableFont_wdth\,wght.ttf"); /* format('woff') */
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: "Open Sans", sans-serif;
+}
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+@media (max-width: 500px) {
+    .container {
+        width: 300px;
+        overflow-x: hidden;
+    }
+}
+@media (min-width: 786px) {
+    .container {
+        width: 750px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        width: 1000px;
+    }
+}
+
+/* Start components */
+.special-heading {
+    font-family: "Open Sans Extrabold";
+    color: #cccdcf;
+    font-size: 100px;
+    text-align: center;
+    margin: 0px;
+    letter-spacing: -2px;
+}
+
+.special-heading + p {
+    text-align: center;
+    color: #454545;
+    margin: -30px;
+}
+
+@media (max-width: 786px) {
+    .special-heading {
+        font-size: 70px;
+    }
+}
+/* End */
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    align-items: center;
+    /* height: 100px; */
+    border-bottom: 1px solid rgb(58, 58, 58);
+}
+
+header .logo {
+    width: 70px;
+}
+
+header nav {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+}
+
+header nav ul li {
+    text-decoration: none;
+    padding: 10px 30px;
+}
+header nav ul li a {
+    color: black;
+    display: block;
+    text-decoration: none;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.landing {
+    background-image: url(../images/background.jpg);
+    background-size: cover;
+    height: calc(100vh - 78px);
+    position: relative;
+}
+
+.landing .intro-text {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.landing h1 {
+    margin: 15px;
+    color: var(--main-color);
+    font-weight: bold;
+    font-size: 45px;
+    text-align: center;
+}
+.landing p {
+    margin: 0;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    line-height: 1.8s;
+}
+
+.features {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: #f6f6f6;
+}
+
+.features .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(255px, 1fr));
+    gap: 50px;
+}
+
+.features .feat {
+    padding: 20px;
+    text-align: center;
+}
+
+.features i {
+    color: var(--main-color);
+    font-size: 35px;
+}
+
+.features h3 {
+    font-family: "Open Sans Extrabold";
+    height: 50px;
+}
+
+.features p {
+    line-height: 1.6;
+    color: #777;
+}
+
+.services p {
+    text-align: center;
+}
+
+.services-content {
+    display: grid;
+    margin-top: 70px;
+    grid-template-columns: repeat(auto-fill, 300px);
+    justify-content: space-evenly;
+}
+
+.services-content i {
+    color: var(--main-color);
+    font-size: 35px;
+}
+
+.services-content h3 {
+    font-family: "Open Sans Extrabold";
+    height: 50px;
+}
+
+.services-content p {
+    line-height: 1.6;
+    color: #777;
+}
+
+.text h3::before {
+    content: "haha";
+}
+
+.srv-hd {
+    display: flex;
+}
+
+.services-content h3 {
+    font-family: "Open Sans Extrabold";
+    height: 50px;
+    width: 100%;
+    margin-bottom: 0;
+    margin-top: 0;
+    text-align: center;
